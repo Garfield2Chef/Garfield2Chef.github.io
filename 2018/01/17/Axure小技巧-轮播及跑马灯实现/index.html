@@ -126,7 +126,7 @@
 
 
 
-  <title>产品Slogan以及定位的总结 | H.P.Y</title>
+  <title>Axure小技巧-轮播及跑马灯实现 | H.P.Y</title>
   
 
 
@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/12/产品Slogan以及定位的总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/17/Axure小技巧-轮播及跑马灯实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Garfield2chef">
@@ -246,7 +246,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">产品Slogan以及定位的总结</h1>
+          <h1 class="post-title" itemprop="name headline">Axure小技巧-轮播及跑马灯实现</h1>
         
 
         <div class="post-meta">
@@ -258,7 +258,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-12T10:44:31+08:00">2018-01-12</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-17T17:20:35+08:00">2018-01-17</time>
             
 
             
@@ -266,28 +266,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/product/" itemprop="url" rel="index">
-                    <span itemprop="name">product</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -316,14 +294,29 @@
       
 
       
-        <p>如果产品在规模小，知名度低的情况下，需要对产品和其他“产品”进行”捆绑”定位。其他产品的“诱因”应该尽可能的高，但也并非越高越好，“诱因的频率，必须和产品整体的‘程度’像匹配，才能达到最好的效果。”</p>
-<p>如果产品规模变大，则应该摆脱捆绑定位。</p>
-<p>例外的产品：</p>
-<ol>
-<li>该品类的产品强调文化属性（景德镇瓷器）</li>
-<li>该产品只在某些地区生产 （杭州龙井）</li>
-<li>同质化竞争非常严重（东北大米）</li>
-</ol>
+        <p>记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人</p>
+<h2 id="轮播的实现"><a href="#轮播的实现" class="headerlink" title="轮播的实现"></a>轮播的实现</h2><p>效果图如下</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fnjqw9k7x0g30a006oqv7.gif" alt=""></p>
+<h3 id="拆解"><a href="#拆解" class="headerlink" title="拆解"></a>拆解</h3><p>两个部分组成</p>
+<p>一个是带字渐变大图的轮播，一个是Dot点的轮播。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也就是说图片1处于展示时，灰Dot同时处于位置1。</p>
+<p>图片1：<br><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fnjra051rhj30vw0k4grt.jpg" alt=""></p>
+<p>Dot1:<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrbrbg0pj30i203i0sp.jpg" alt=""></p>
+<p>以此类推，分别设置2-5的图片和Dot。</p>
+<p>然后设置轮播，在page的页面OnPageLoad–&gt;set Panel State–&gt;(分别选中两个动态面板)–&gt;Select state(Next)–&gt;Wrap from last to first–&gt;Repeat every[轮播间隔时间]–&gt;Animate in（进入动画，默认与Animate out一致，我这个用的是fade）[动画的时间]</p>
+<p>ok，大功告成。</p>
+<h2 id="跑马灯的实现"><a href="#跑马灯的实现" class="headerlink" title="跑马灯的实现"></a>跑马灯的实现</h2><p>效果图如下</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrpvwerqg30a006odww.gif" alt=""></p>
+<p>其实一些跑马灯效果能用上面的轮播方式展现出来，下面的方法是通过<strong>位移</strong>实现的。</p>
+<h3 id="拆解-1"><a href="#拆解-1" class="headerlink" title="拆解"></a>拆解</h3><p>三个部分</p>
+<p>一个是纯白色但是带Border(边线)的长方形背景，一个是向上移动的渐变色长方形动态面板。</p>
+<p>大致看起来好像就这两个部分，其实还有长方形被我Hide起来当控制器了，在正式渲染的页面也是看不到的。</p>
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p>背景，只是个参照物，突出线条能进行明显比较即可。动态面板的放置于背景长方形完美重叠，如下：<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fnjs1b31vij30j00b2749.jpg" alt=""></p>
+<p>这次动态面板只需要一个state即可，在这个state放置一个渐变长方形，为了突出向上移动，需要把渐变长方形藏于展示区域下方，如下：<br><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fnjs5vkf3wj30j40m83zv.jpg" alt=""></p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>虚线展示区域的高度为170，渐变长方形高也为170，从进入展示区域，到完整离开，需要产生的位移是<strong>（0，-340）</strong>，X轴不产生位移，向下为正，所以向上运动为负。因为是线性位移，一会Animate选择<strong>linear</strong>，动画的时间即为快慢。</p>
+<p>跑马灯是个循环的过程，渐变长方形第一次位移完成后，我们需要将它置回原地，产生的位移<strong>（0,340）</strong>，由于置回原地这个过程我们不希望被展示区域捕捉，所以不设置Animate即0秒内回到原地。</p>
+<p>这一系列的操作我们都由控制器长方形（任意物体都可以）完成。为了使这个操作循环起来，需要show hide这个控制器（变量的方式也可以，较为麻烦）。即在OnShow状态，执行向上位移，执行完后转换OnHide状态，在OnHide状态，执行返回原地位移，执行完后转换OnShow状态。</p>
+<h4 id="坑点"><a href="#坑点" class="headerlink" title="坑点"></a>坑点</h4><p>既然选择OnShow为我们操作的起始步骤，那么需要先把控制器给Hide起来，不然无法触发这个OnShow状态。接着设置OnPageLoad事件中设置控制器Show。</p>
 
       
     </div>
@@ -339,12 +332,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/定位/" rel="tag"># 定位</a>
-          
-        </div>
-      
 
       
       
@@ -354,8 +341,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/11/Mac下更换Git账号/" rel="next" title="Mac下更换Git账号">
-                <i class="fa fa-chevron-left"></i> Mac下更换Git账号
+              <a href="/2018/01/12/Git错误-ERROR-Deployer-not-found-git/" rel="next" title="Git错误--ERROR Deployer not found: git">
+                <i class="fa fa-chevron-left"></i> Git错误--ERROR Deployer not found: git
               </a>
             
           </div>
@@ -363,10 +350,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/12/Git错误-ERROR-Deployer-not-found-git/" rel="prev" title="Git错误--ERROR Deployer not found: git">
-                Git错误--ERROR Deployer not found: git <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -415,8 +398,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -476,6 +468,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#轮播的实现"><span class="nav-number">1.</span> <span class="nav-text">轮播的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拆解"><span class="nav-number">1.1.</span> <span class="nav-text">拆解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">1.2.</span> <span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跑马灯的实现"><span class="nav-number">2.</span> <span class="nav-text">跑马灯的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拆解-1"><span class="nav-number">2.1.</span> <span class="nav-text">拆解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-1"><span class="nav-number">2.2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">2.2.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#坑点"><span class="nav-number">2.2.2.</span> <span class="nav-text">坑点</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
