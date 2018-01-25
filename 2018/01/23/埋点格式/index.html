@@ -120,7 +120,7 @@
 
 
 
-  <title>Category: product | H.P.Y</title>
+  <title>埋点格式 | H.P.Y</title>
   
 
 
@@ -139,7 +139,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     
@@ -207,59 +207,193 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>product<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/23/埋点格式/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Garfield2chef">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="H.P.Y">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/12/产品Slogan以及定位的总结/" itemprop="url">
-              
-                <span itemprop="name">产品Slogan以及定位的总结</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">埋点格式</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-12T10:44:31+08:00"
-              content="2018-01-12" >
-          01-12
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-23T14:58:09+08:00">2018-01-23</time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>总结埋点文档处理，产品埋点应该按照编程的思维来进行，将可以抽象的东西，全部抽象出来。</p>
+<h3 id="埋点分类"><a href="#埋点分类" class="headerlink" title="埋点分类"></a>埋点分类</h3><ul>
+<li>最基本的埋点应该是页面本身（Web、移动都可以实现）</li>
+<li>可与用户产生交互的元素</li>
+</ul>
+<h3 id="基础数据维度"><a href="#基础数据维度" class="headerlink" title="基础数据维度"></a>基础数据维度</h3><table>
+<thead>
+<tr>
+<th>页面基础数据维度</th>
+<th>示例</th>
+<th>缺省值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td>index.html</td>
+<td>0(进入的第一个页面)</td>
+</tr>
+<tr>
+<td>to</td>
+<td>result.html</td>
+<td>0(离开网站的最后一个页面)</td>
+</tr>
+<tr>
+<td>stay_time</td>
+<td>30(sec)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>PV</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>UV</td>
+<td>2</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/17/Axure小技巧-轮播及跑马灯实现/" rel="next" title="Axure小技巧-轮播及跑马灯实现">
+                <i class="fa fa-chevron-left"></i> Axure小技巧-轮播及跑马灯实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/25/产品分析案例-不跑就出局/" rel="prev" title="产品分析案例--不跑就出局">
+                产品分析案例--不跑就出局 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -280,8 +414,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -341,6 +484,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#埋点分类"><span class="nav-number">1.</span> <span class="nav-text">埋点分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础数据维度"><span class="nav-number">2.</span> <span class="nav-text">基础数据维度</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -472,6 +631,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
 
   
 
