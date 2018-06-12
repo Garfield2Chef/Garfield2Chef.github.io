@@ -75,22 +75,24 @@
 
 
 
-<meta name="description" content="背景这款游戏在2018年1月中旬是一个爆款游戏，坐上了App Store第一的宝座，Android各大应用市场也是独占鳌头。是一个互联网人就想把这个游戏给剔肤见骨，我自然也免不了俗。 关于游戏本身爆火原因很多人把这款游戏火的原因大致定义为几种：  游戏轻松，不会像当前市场的其他手游爆肝 画风温馨、风格治愈 不断地惊喜，不论是外出旅行寄回的照片，还是在家一直吃饭看书写字 这段时间的佛系风格  这几个">
+<meta name="description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
 <meta property="og:type" content="article">
-<meta property="og:title" content="现象级app--旅行青蛙">
-<meta property="og:url" content="http://yoursite.com/2018/01/25/现象级app-旅行青蛙/index.html">
+<meta property="og:title" content="Axure小技巧-轮播及跑马灯实现">
+<meta property="og:url" content="http://yoursite.com/2018/01/17/Axure小技巧-轮播及跑马灯实现/index.html">
 <meta property="og:site_name" content="H.P.Y">
-<meta property="og:description" content="背景这款游戏在2018年1月中旬是一个爆款游戏，坐上了App Store第一的宝座，Android各大应用市场也是独占鳌头。是一个互联网人就想把这个游戏给剔肤见骨，我自然也免不了俗。 关于游戏本身爆火原因很多人把这款游戏火的原因大致定义为几种：  游戏轻松，不会像当前市场的其他手游爆肝 画风温馨、风格治愈 不断地惊喜，不论是外出旅行寄回的照片，还是在家一直吃饭看书写字 这段时间的佛系风格  这几个">
+<meta property="og:description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fnsyl12tyrj30hs0hswge.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnt26uti8cj31c10datam.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnt2cqfpedj31c1042q4f.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fnt2dd027tj31c10dztdd.jpg">
-<meta property="og:updated_time" content="2018-01-26T04:37:20.000Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjqw9k7x0g30a006oqv7.gif">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fnjra051rhj30vw0k4grt.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrbrbg0pj30i203i0sp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrpvwerqg30a006odww.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjs1b31vij30j00b2749.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fnjs5vkf3wj30j40m83zv.jpg">
+<meta property="og:updated_time" content="2018-01-17T10:48:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="现象级app--旅行青蛙">
-<meta name="twitter:description" content="背景这款游戏在2018年1月中旬是一个爆款游戏，坐上了App Store第一的宝座，Android各大应用市场也是独占鳌头。是一个互联网人就想把这个游戏给剔肤见骨，我自然也免不了俗。 关于游戏本身爆火原因很多人把这款游戏火的原因大致定义为几种：  游戏轻松，不会像当前市场的其他手游爆肝 画风温馨、风格治愈 不断地惊喜，不论是外出旅行寄回的照片，还是在家一直吃饭看书写字 这段时间的佛系风格  这几个">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fnsyl12tyrj30hs0hswge.jpg">
+<meta name="twitter:title" content="Axure小技巧-轮播及跑马灯实现">
+<meta name="twitter:description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjqw9k7x0g30a006oqv7.gif">
 
 
 
@@ -118,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/25/现象级app-旅行青蛙/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/17/Axure小技巧-轮播及跑马灯实现/"/>
 
 
 
@@ -299,7 +301,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>

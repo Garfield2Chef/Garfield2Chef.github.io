@@ -75,22 +75,24 @@
 
 
 
-<meta name="description" content="背景这款游戏在2018年1月中旬是一个爆款游戏，坐上了App Store第一的宝座，Android各大应用市场也是独占鳌头。是一个互联网人就想把这个游戏给剔肤见骨，我自然也免不了俗。 关于游戏本身爆火原因很多人把这款游戏火的原因大致定义为几种：  游戏轻松，不会像当前市场的其他手游爆肝 画风温馨、风格治愈 不断地惊喜，不论是外出旅行寄回的照片，还是在家一直吃饭看书写字 这段时间的佛系风格  这几个">
+<meta name="description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
 <meta property="og:type" content="article">
-<meta property="og:title" content="现象级app--旅行青蛙">
-<meta property="og:url" content="http://yoursite.com/2018/01/25/现象级app-旅行青蛙/index.html">
+<meta property="og:title" content="Axure小技巧-轮播及跑马灯实现">
+<meta property="og:url" content="http://yoursite.com/2018/01/17/Axure小技巧-轮播及跑马灯实现/index.html">
 <meta property="og:site_name" content="H.P.Y">
-<meta property="og:description" content="背景这款游戏在2018年1月中旬是一个爆款游戏，坐上了App Store第一的宝座，Android各大应用市场也是独占鳌头。是一个互联网人就想把这个游戏给剔肤见骨，我自然也免不了俗。 关于游戏本身爆火原因很多人把这款游戏火的原因大致定义为几种：  游戏轻松，不会像当前市场的其他手游爆肝 画风温馨、风格治愈 不断地惊喜，不论是外出旅行寄回的照片，还是在家一直吃饭看书写字 这段时间的佛系风格  这几个">
+<meta property="og:description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fnsyl12tyrj30hs0hswge.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnt26uti8cj31c10datam.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnt2cqfpedj31c1042q4f.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fnt2dd027tj31c10dztdd.jpg">
-<meta property="og:updated_time" content="2018-01-26T04:37:20.000Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjqw9k7x0g30a006oqv7.gif">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fnjra051rhj30vw0k4grt.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrbrbg0pj30i203i0sp.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrpvwerqg30a006odww.gif">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjs1b31vij30j00b2749.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fnjs5vkf3wj30j40m83zv.jpg">
+<meta property="og:updated_time" content="2018-01-17T10:48:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="现象级app--旅行青蛙">
-<meta name="twitter:description" content="背景这款游戏在2018年1月中旬是一个爆款游戏，坐上了App Store第一的宝座，Android各大应用市场也是独占鳌头。是一个互联网人就想把这个游戏给剔肤见骨，我自然也免不了俗。 关于游戏本身爆火原因很多人把这款游戏火的原因大致定义为几种：  游戏轻松，不会像当前市场的其他手游爆肝 画风温馨、风格治愈 不断地惊喜，不论是外出旅行寄回的照片，还是在家一直吃饭看书写字 这段时间的佛系风格  这几个">
-<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fnsyl12tyrj30hs0hswge.jpg">
+<meta name="twitter:title" content="Axure小技巧-轮播及跑马灯实现">
+<meta name="twitter:description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjqw9k7x0g30a006oqv7.gif">
 
 
 
@@ -118,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/25/现象级app-旅行青蛙/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/17/Axure小技巧-轮播及跑马灯实现/"/>
 
 
 
@@ -212,6 +214,142 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/12/婚礼竞品分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Garfield2chef">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="H.P.Y">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/12/婚礼竞品分析/" itemprop="url">婚礼纪竞品分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-12T16:45:51+08:00">2018-06-12</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="产品名称："><a href="#产品名称：" class="headerlink" title="产品名称："></a>产品名称：</h3><p>婚礼纪APP</p>
+<h4 id="产品简介："><a href="#产品简介：" class="headerlink" title="产品简介："></a>产品简介：</h4><p>婚礼纪是一款面向结婚新人的跨平台婚礼服务的移动应用其专注婚礼行业垂直细分市场，帮助新人解决婚礼筹备与记录的难题。婚礼纪集婚礼工具（电子请帖、微信墙、备婚清单等）、婚礼用品、婚车自营、社区分享为一体，集各地的婚礼商家，为适婚人群提供一站式的婚礼服务。</p>
+<h4 id="产品定位："><a href="#产品定位：" class="headerlink" title="产品定位："></a>产品定位：</h4><p>为适婚人群提供一站式的婚礼服务。</p>
+<h4 id="目标用户："><a href="#目标用户：" class="headerlink" title="目标用户："></a>目标用户：</h4><p>80、90后适婚青年。</p>
+<h4 id="行业背景："><a href="#行业背景：" class="headerlink" title="行业背景："></a>行业背景：</h4><p>婚礼行业属于超低频、高消费的，用户基数大，市场广阔。该行业完全属于口碑产品，用户很难留存，但可以通过口碑传播。</p>
+<h4 id="需求点："><a href="#需求点：" class="headerlink" title="需求点："></a>需求点：</h4><p>1、用户对于婚礼筹划无从下手，期待一条龙服务。<br>2、用户对于婚礼筹备需要花费的价格没有清楚的认知，害怕被骗。<br>3、用户大多数为工作不久的年轻人，结婚办婚礼不仅需要一大笔钱，还需要留出合适的时间来进行筹备，以免耽误工作。</p>
+<h4 id="产品结构图："><a href="#产品结构图：" class="headerlink" title="产品结构图："></a>产品结构图：</h4><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fs8mzhx9trj31kw219hdt.jpg" alt=""></p>
+<h4 id="功能分析："><a href="#功能分析：" class="headerlink" title="功能分析："></a>功能分析：</h4><p>1、首页-明确直观地告诉用户APP的定位，能帮助用户解决什么问题，为了方便解决这些问题，能够提供什么服务产品。</p>
+<p>1-1通过搜索能够快速搜索用户想要的内容和服务，婚礼纪的关键词搜索，是分类返回，通过不同的图标加文字的形式展示，直观，用户体验也不错。<br><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fs8nd7jns9j30u01o075u.jpg" alt=""></p>
+<p>1-2通过图标加文字的引导方式，直接明确提供的服务内容，以及商品。</p>
+<p>1-3针对每个实际的服务或商品，在Banner位展示，能引导用户浏览。</p>
+<p>2、首页的布局</p>
+<p>首页第一屏，除了banner位、功能分类，占屏最多的为“全球旅拍”，可以分析出，在现在婚礼过程中，用户更加注重旅拍这一项。</p>
+<p>3、社区属性</p>
+<p>婚庆平台是一个低频应用，留存用户十分困难，婚礼纪通过“论坛、问答、直播”的社交形式，提升用户的粘性和活跃度，增加平台自身属性。婚庆业务靠口碑支撑（不同于普通商品，价格战不是特别适用），婚礼纪在商品页、专栏等都着重提现了UGC内容，其他用户的评价对商品的影响力是不可忽视的。</p>
+<p>4、小工具<br>实用的小工具：电子请帖、婚礼墙、座位安排的便捷都能增加用户对平台的好感度。婚姻流程指南，婚礼任务，能够更加清晰告诉用户，一个婚礼到底需要什么东西，用户需要做什么，平台可以帮助用户做什么。结婚预算能够更加推广“新婚贷”，为平台增加广告收入。</p>
+<p>总结：<br>用户场景细致，体验较好，商家整合能力强大，让用户能明确平台在婚礼策划过程中的优势，促进用户消费，和口碑推广。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1282,7 +1420,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
