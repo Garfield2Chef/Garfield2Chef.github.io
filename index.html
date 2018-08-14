@@ -75,24 +75,20 @@
 
 
 
-<meta name="description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
+<meta name="description" content="产品名称：婚礼纪APP 产品简介：婚礼纪是一款面向结婚新人的跨平台婚礼服务的移动应用其专注婚礼行业垂直细分市场，帮助新人解决婚礼筹备与记录的难题。婚礼纪集婚礼工具（电子请帖、微信墙、备婚清单等）、婚礼用品、婚车自营、社区分享为一体，集各地的婚礼商家，为适婚人群提供一站式的婚礼服务。 产品定位：为适婚人群提供一站式的婚礼服务。 目标用户：80、90后适婚青年。 行业背景：婚礼行业属于超低频、高消费的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Axure小技巧-轮播及跑马灯实现">
-<meta property="og:url" content="http://yoursite.com/2018/01/17/Axure小技巧-轮播及跑马灯实现/index.html">
+<meta property="og:title" content="婚礼纪竞品分析">
+<meta property="og:url" content="http://yoursite.com/2018/06/12/婚礼竞品分析/index.html">
 <meta property="og:site_name" content="H.P.Y">
-<meta property="og:description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
+<meta property="og:description" content="产品名称：婚礼纪APP 产品简介：婚礼纪是一款面向结婚新人的跨平台婚礼服务的移动应用其专注婚礼行业垂直细分市场，帮助新人解决婚礼筹备与记录的难题。婚礼纪集婚礼工具（电子请帖、微信墙、备婚清单等）、婚礼用品、婚车自营、社区分享为一体，集各地的婚礼商家，为适婚人群提供一站式的婚礼服务。 产品定位：为适婚人群提供一站式的婚礼服务。 目标用户：80、90后适婚青年。 行业背景：婚礼行业属于超低频、高消费的">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjqw9k7x0g30a006oqv7.gif">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fnjra051rhj30vw0k4grt.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrbrbg0pj30i203i0sp.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjrpvwerqg30a006odww.gif">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjs1b31vij30j00b2749.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fnjs5vkf3wj30j40m83zv.jpg">
-<meta property="og:updated_time" content="2018-01-17T10:48:50.000Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fs8mzhx9trj31kw219hdt.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1fs8nd7jns9j30u01o075u.jpg">
+<meta property="og:updated_time" content="2018-06-12T12:43:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Axure小技巧-轮播及跑马灯实现">
-<meta name="twitter:description" content="记录一些基本Axure的动画实现小技巧和坑点，避免以后遗忘，也正好分享给需要的人 轮播的实现效果图如下  拆解两个部分组成 一个是带字渐变大图的轮播，一个是Dot点的轮播。 实现如果只做到这个样子的轮播原型示意，Axure实现起来相当简单，创建2个Dynamic Panel(动态面板)，这两个动态面板分别拥有5个state（状态）（图片1|灰Dot处于位置1、图片2|灰Dot处于位置2、..），也">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNc79ly1fnjqw9k7x0g30a006oqv7.gif">
+<meta name="twitter:title" content="婚礼纪竞品分析">
+<meta name="twitter:description" content="产品名称：婚礼纪APP 产品简介：婚礼纪是一款面向结婚新人的跨平台婚礼服务的移动应用其专注婚礼行业垂直细分市场，帮助新人解决婚礼筹备与记录的难题。婚礼纪集婚礼工具（电子请帖、微信墙、备婚清单等）、婚礼用品、婚车自营、社区分享为一体，集各地的婚礼商家，为适婚人群提供一站式的婚礼服务。 产品定位：为适婚人群提供一站式的婚礼服务。 目标用户：80、90后适婚青年。 行业背景：婚礼行业属于超低频、高消费的">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1fs8mzhx9trj31kw219hdt.jpg">
 
 
 
@@ -120,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/17/Axure小技巧-轮播及跑马灯实现/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/12/婚礼竞品分析/"/>
 
 
 
@@ -214,6 +210,137 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/14/用户对产品的归属感/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Garfield2chef">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="H.P.Y">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/14/用户对产品的归属感/" itemprop="url">用户对产品的归属感</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-14T15:00:31+08:00">2018-08-14</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>“你对一个产品产生的归属感，归根结底是因为你认可你所在用户群体”</p>
+<p>B站、网易云音乐</p>
+<p>培养归属感的步骤：</p>
+<ul>
+<li>给自己的用户群体打上标签</li>
+<li>说服已有用户接受这个标签</li>
+<li>寻找其他这个标签的用户使用自己的产品</li>
+<li>形成群体</li>
+</ul>
+<h4 id="归属感和标签的疑问"><a href="#归属感和标签的疑问" class="headerlink" title="归属感和标签的疑问"></a>归属感和标签的疑问</h4><p> 是否有产品故意弱化自己的标签属性，尽可能同质化所有的竞品，这样是否有可能拥有最大规模的用户群体？</p>
+<p> QQ音乐</p>
+<p> 没有标签=拥有所有的标签</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1420,7 +1547,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
